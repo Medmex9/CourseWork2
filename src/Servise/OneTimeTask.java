@@ -10,6 +10,6 @@ public class OneTimeTask extends Task {
 
     @Override
     public boolean appearsIn(LocalDate date) {
-        return date.isBefore(ChronoLocalDate.from(getDataTime()));
+        return date.equals(this.getDataTime().toLocalDate());
     }
 }
